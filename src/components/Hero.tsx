@@ -1,0 +1,147 @@
+'use client'
+
+import { motion } from 'framer-motion'
+import { ArrowDown, Leaf, Palette, Heart } from 'lucide-react'
+
+export default function Hero() {
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 -z-10">
+        {/* Gradient Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-sand-100 via-sand-50 to-sage-50" />
+        
+        {/* Organic Shapes */}
+        <motion.div
+          animate={{ scale: [1, 1.05, 1], rotate: [0, 5, 0] }}
+          transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-20 right-[10%] w-64 h-64 md:w-96 md:h-96 bg-sage-200/40 rounded-full blur-3xl"
+        />
+        <motion.div
+          animate={{ scale: [1, 1.08, 1], rotate: [0, -5, 0] }}
+          transition={{ duration: 25, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute bottom-20 left-[5%] w-72 h-72 md:w-[500px] md:h-[500px] bg-terracotta-200/30 rounded-full blur-3xl"
+        />
+        <motion.div
+          animate={{ scale: [1, 1.03, 1] }}
+          transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-sand-200/50 rounded-full blur-3xl"
+        />
+      </div>
+
+      <div className="container mx-auto px-6 pt-24">
+        <div className="max-w-4xl mx-auto text-center">
+          {/* Tagline */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="flex items-center justify-center gap-2 mb-8"
+          >
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-sage-100 text-sage-700 rounded-full text-sm">
+              <Leaf className="w-4 h-4" />
+              Digital engagé & accessible
+            </span>
+          </motion.div>
+
+          {/* Main Title */}
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="font-serif text-4xl md:text-6xl lg:text-7xl text-clay-900 leading-tight mb-6"
+          >
+            Votre présence digitale,{' '}
+            <span className="relative">
+              <span className="relative z-10 text-sage-600">naturellement</span>
+              <motion.span
+                initial={{ scaleX: 0 }}
+                animate={{ scaleX: 1 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
+                className="absolute bottom-2 left-0 right-0 h-3 bg-sage-200/60 -z-0 origin-left"
+              />
+            </span>{' '}
+            belle
+          </motion.h1>
+
+          {/* Subtitle */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-lg md:text-xl text-clay-600 max-w-2xl mx-auto mb-12 leading-relaxed"
+          >
+            Sites web accessibles et esthétiques pour entrepreneurs du vivant, artistes, 
+            thérapeutes et acteurs du changement positif.
+          </motion.p>
+
+          {/* CTA Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
+          >
+            <a
+              href="#contact"
+              className="group bg-sage-600 text-white px-8 py-4 rounded-full text-lg hover:bg-sage-700 transition-all duration-300 hover:shadow-xl hover:shadow-sage-600/20 flex items-center gap-2"
+            >
+              Parlons de votre projet
+              <motion.span
+                animate={{ x: [0, 5, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity }}
+              >
+                →
+              </motion.span>
+            </a>
+            <a
+              href="#services"
+              className="px-8 py-4 rounded-full text-lg text-clay-700 hover:text-sage-600 transition-colors border border-clay-200 hover:border-sage-300"
+            >
+              Découvrir les offres
+            </a>
+          </motion.div>
+
+          {/* Trust Icons */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="flex items-center justify-center gap-8 md:gap-12 text-clay-500"
+          >
+            <div className="flex items-center gap-2 text-sm">
+              <Palette className="w-5 h-5 text-terracotta-500" />
+              <span>Art & Culture</span>
+            </div>
+            <div className="flex items-center gap-2 text-sm">
+              <Leaf className="w-5 h-5 text-sage-500" />
+              <span>Nature & Écologie</span>
+            </div>
+            <div className="flex items-center gap-2 text-sm">
+              <Heart className="w-5 h-5 text-terracotta-400" />
+              <span>Bien-être</span>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.2 }}
+          className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        >
+          <motion.a
+            href="#philosophie"
+            animate={{ y: [0, 10, 0] }}
+            transition={{ duration: 2, repeat: Infinity }}
+            className="flex flex-col items-center gap-2 text-clay-400 hover:text-sage-600 transition-colors"
+          >
+            <span className="text-xs tracking-widest uppercase">Explorer</span>
+            <ArrowDown className="w-5 h-5" />
+          </motion.a>
+        </motion.div>
+      </div>
+    </section>
+  )
+}
