@@ -1,43 +1,30 @@
+// app/api/contact/route.ts
 import { NextRequest, NextResponse } from 'next/server'
-import { Resend } from 'resend'
-import { supabase } from '@/lib/supabase'
+import nodemailer from 'nodemailer'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+const transporter = nodemailer.createTransport({
+  host: process.env.SMTP_HOST,
+  port: Number(process.env.SMTP_PORT) || 465,
+  secure: true,
+  auth: {
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASS,
+  },
+})
 
 export async function POST(request: NextRequest) {
-  console.log('=== Début de la requête contact ===')
-  console.log('RESEND_API_KEY présente:', !!process.env.RESEND_API_KEY)
-  
   try {
     const body = await request.json()
     const { name, email, project, message } = body
-    console.log('Données reçues:', { name, email, project, message: message?.substring(0, 50) })
 
-    // Validation basique
+    // Validation
     if (!name || !email || !message) {
-      console.log('Validation échouée: champs manquants')
       return NextResponse.json(
         { error: 'Nom, email et message sont requis' },
         { status: 400 }
       )
     }
 
-    // 1. Sauvegarder dans Supabase
-    console.log('Tentative sauvegarde Supabase...')
-    const { error: dbError } = await supabase
-      .from('contacts')
-      .insert([{ name, email, project, message }])
-
-    if (dbError) {
-      console.error('Erreur Supabase:', dbError)
-      // On continue quand même pour envoyer l'email
-    } else {
-      console.log('Sauvegarde Supabase OK')
-    }
-
-    // 2. Envoyer l'email avec Resend
-    console.log('Tentative envoi email Resend...')
-    
     const projectLabels: Record<string, string> = {
       'essentielle': 'Présence Essentielle (300€)',
       'association': 'Pack Communauté (550€)',
@@ -45,27 +32,21 @@ export async function POST(request: NextRequest) {
       'autre': 'Autre / Sur mesure',
     }
 
-    const { data, error: emailError } = await resend.emails.send({
-      from: 'Webopoli <thomas@webopoli.com>',
-      to: ['thomas@webopoli.com'],
-      reply_to: email,
+    // Envoi email
+    await transporter.sendMail({
+      from: `"Webopoli" <${process.env.SMTP_USER}>`,
+      to: 'thomas@webopoli.com',
+      replyTo: email,
       subject: `💬 Nouveau message de ${name} - Webopoli`,
       html: `
         <!DOCTYPE html>
         <html>
         <head>
           <meta name="color-scheme" content="light">
-          <meta name="supported-color-schemes" content="light">
-          <style>
-            :root { color-scheme: light; }
-            @media (prefers-color-scheme: dark) {
-              .email-wrapper { background-color: #ffffff !important; }
-            }
-          </style>
         </head>
         <body style="margin: 0; padding: 0; background-color: #ffffff;">
-          <div class="email-wrapper" style="background-color: #ffffff; padding: 20px;">
-            <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 600px; margin: 0 auto; background-color: #ffffff;">
+          <div style="background-color: #ffffff; padding: 20px;">
+            <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 600px; margin: 0 auto;">
               <div style="background: linear-gradient(135deg, #547454 0%, #6B936B 100%); padding: 30px; border-radius: 16px 16px 0 0;">
                 <h1 style="color: #ffffff; margin: 0; font-size: 24px;">Nouveau message de contact</h1>
               </div>
@@ -102,8 +83,8 @@ export async function POST(request: NextRequest) {
                 </div>
               </div>
               
-              <p style="color: #9A8567; font-size: 12px; text-align: center; margin-top: 24px; background-color: #ffffff;">
-                Message envoyé depuis le formulaire de contact webopoli.com
+              <p style="color: #9A8567; font-size: 12px; text-align: center; margin-top: 24px;">
+                Message envoyé depuis webopoli.com
               </p>
             </div>
           </div>
@@ -112,21 +93,12 @@ export async function POST(request: NextRequest) {
       `,
     })
 
-    if (emailError) {
-      console.error('Erreur Resend:', emailError)
-      return NextResponse.json(
-        { error: 'Erreur lors de l\'envoi de l\'email', details: emailError.message },
-        { status: 500 }
-      )
-    }
-
-    console.log('Email envoyé avec succès, ID:', data?.id)
-    return NextResponse.json({ success: true, messageId: data?.id })
+    return NextResponse.json({ success: true })
 
   } catch (error) {
-    console.error('Erreur générale:', error)
+    console.error('Erreur envoi email:', error)
     return NextResponse.json(
-      { error: 'Une erreur est survenue', details: error instanceof Error ? error.message : 'Erreur inconnue' },
+      { error: 'Erreur lors de l\'envoi' },
       { status: 500 }
     )
   }
