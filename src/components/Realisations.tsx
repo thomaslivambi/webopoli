@@ -6,6 +6,12 @@ import { useLanguage } from '@/context/LanguageContext'
 import Image from 'next/image'
 
 const projectsData = [
+  { id: 'fairgreen', category: 'nature', image: '/images/projets/fairgreen.webp', color: 'sage', url: 'https://fairgreen.ee', year: '2021' },
+  { id: 'e-compost', category: 'nature', image: '/images/projets/e-compost.webp', color: 'sage', url: 'https://e-compost.ee/', year: '2022' },
+  { id: 'safariland', category: 'business', image: '/images/projets/safariland.webp', color: 'terracotta', url: 'https://safariland.fr', year: '2024' },
+  { id: 'hote-ideal', category: ['business', 'art'], image: '/images/projets/hote-ideal.webp', color: 'terracotta', url: 'https://lhoteideal.fr/', year: '2024' },
+  { id: 'helenes-delicacies', category: ['nature', 'art', 'business'], image: '/images/projets/helenes-delicacies.webp', color: 'terracotta', url: 'https://helenesdelicacies.com', year: '2024' },
+  { id: 'cours-vivantes', category: ['community', 'nature'], image: '/images/projets/cours-vivantes.webp', color: 'sage', url: 'https://coursvivantes.fr', year: '2025' },
   { id: 'benoit-segui', category: 'art', image: '/images/projets/benoit-segui.webp', color: 'terracotta', url: null, year: '2020' },
   { id: 'bastien-pouilles', category: 'art', image: '/images/projets/bastien-pouilles.webp', color: 'terracotta', url: 'https://bastienpouilles.com', year: '2020' },
   { id: 'pikasilla', category: 'nature', image: '/images/projets/pikasilla.webp', color: 'sage', url: 'https://pikasillapuhkemaja.ee', year: '2023' },
@@ -13,14 +19,9 @@ const projectsData = [
   { id: 'orion-naval', category: 'business', image: '/images/projets/orion-naval.webp', color: 'clay', url: 'https://orionnaval.com', year: '2024' },
   { id: 'better-organix', category: 'nature', image: '/images/projets/better-organix.webp', color: 'sage', url: 'https://betterorganix.com', year: '2023' },
   { id: 'joelahtme-aed', category: 'nature', image: '/images/projets/joelahtme-aed.webp', color: 'sage', url: 'https://aed.betterorganix.com', year: '2025' },
-  { id: 'safariland', category: 'business', image: '/images/projets/safariland.webp', color: 'terracotta', url: 'https://safariland.fr', year: '2024' },
-  { id: 'hote-ideal', category: ['business', 'art'], image: '/images/projets/hote-ideal.webp', color: 'terracotta', url: 'https://lhoteideal.fr/', year: '2024' },
   { id: 'vahtrame', category: ['art', 'business'], image: '/images/projets/vahtrame.webp', color: 'clay', url: 'https://vahtrame.ee/', year: '2022' },
-  { id: 'e-compost', category: 'nature', image: '/images/projets/e-compost.webp', color: 'sage', url: 'https://e-compost.ee/', year: '2022' },
   { id: 'fairgrow', category: 'nature', image: '/images/projets/fairgrow.webp', color: 'sage', url: 'https://fairgrow.ee', year: '2021' },
-  { id: 'fairgreen', category: 'nature', image: '/images/projets/fairgreen.webp', color: 'sage', url: 'https://fairgreen.ee', year: '2021' },
-  { id: 'helenes-delicacies', category: ['nature', 'art', 'business'], image: '/images/projets/helenes-delicacies.webp', color: 'terracotta', url: 'https://helenesdelicacies.com', year: '2024' },
-  { id: 'cours-vivantes', category: ['community', 'nature'], image: '/images/projets/cours-vivantes.webp', color: 'sage', url: 'https://coursvivantes.fr', year: '2025' },
+  
 ]
 
 // Nombre de projets affichés initialement (réduction du DOM)
