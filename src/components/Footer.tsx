@@ -42,8 +42,22 @@ export default function Footer() {
                 <Leaf className="w-4 h-4" aria-hidden="true" />
                 <span>{t.hero.badge}</span>
               </p>
-              <a href="https://bff.ecoindex.fr/redirect/?url={https://webopoli.com}" target="_blank">
-                <img src="https://bff.ecoindex.fr/badge/?theme={light}&url={https://webopoli.com}" alt="Ecoindex Badge" />
+              <br></br>
+              <p>Ce site a une empreinte environnementale intentionnellement réduite</p>
+              <a 
+                href="https://www.ecoindex.fr/resultat/?url=https://webopoli.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block mt-4"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img 
+                  src="https://bff.ecoindex.fr/badge/?theme=dark&url=https://webopoli.com" 
+                  alt="Score EcoIndex du site" 
+                  width={120}
+                  height={50}
+                  loading="lazy"
+                />
               </a>
             </div>
 
