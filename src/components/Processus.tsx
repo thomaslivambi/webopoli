@@ -68,7 +68,7 @@ export default function Processus() {
               >
                 {/* Content */}
                 <div className={`flex-1 ${index % 2 === 1 ? 'md:text-right' : ''}`}>
-                  <span className="inline-block text-sage-300 font-serif text-6xl md:text-7xl mb-4" aria-hidden="true">
+                  <span className="inline-block text-sage-500 font-serif text-6xl md:text-7xl mb-4" aria-hidden="true">
                     {step.number}
                   </span>
                   <h3 className="font-serif text-2xl md:text-3xl text-clay-800 mb-3">

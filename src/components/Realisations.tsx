@@ -150,7 +150,7 @@ export default function Realisations() {
                   <span className={`text-xs uppercase tracking-wider ${
                     projet.color === 'sage' ? 'text-sage-600' :
                     projet.color === 'terracotta' ? 'text-terracotta-600' :
-                    'text-clay-500'
+                    'text-clay-600'
                   }`}>
                     {projet.categoryLabel}
                   </span>

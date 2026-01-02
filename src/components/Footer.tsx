@@ -35,7 +35,7 @@ export default function Footer() {
                   web<span className="text-sage-400">opoli</span>
                 </span>
               </Link>
-              <p className="text-sand-400 leading-relaxed max-w-md mb-6">
+              <p className="text-sand-300 leading-relaxed max-w-md mb-6">
                 {t.footer.tagline}
               </p>
               <p className="flex items-center gap-2 text-sage-400 text-sm">
@@ -63,13 +63,13 @@ export default function Footer() {
 
             {/* Navigation */}
             <nav aria-label="Navigation pied de page">
-              <h4 className="font-serif text-lg text-sand-100 mb-4">{t.footer.navigation}</h4>
+              <h2 className="font-serif text-lg text-sand-100 mb-4">{t.footer.navigation}</h2>
               <ul className="space-y-2 list-none p-0">
                 {footerLinks.navigation.map((link) => (
                   <li key={link.label}>
                     <a
                       href={link.href}
-                      className="text-sand-400 hover:text-sage-400 transition-colors"
+                      className="text-sand-300 hover:text-sage-400 transition-colors"
                     >
                       {link.label}
                     </a>
@@ -80,13 +80,13 @@ export default function Footer() {
 
             {/* Legal */}
             <nav aria-label="Liens légaux">
-              <h4 className="font-serif text-lg text-sand-100 mb-4">{t.footer.legal}</h4>
+              <h2 className="font-serif text-lg text-sand-100 mb-4">{t.footer.legal}</h2>
               <ul className="space-y-2 list-none p-0">
                 {footerLinks.legal.map((link) => (
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-sand-400 hover:text-sage-400 transition-colors"
+                      className="text-sand-300 hover:text-sage-400 transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -100,7 +100,7 @@ export default function Footer() {
           <hr className="border-clay-800 mb-8" />
 
           {/* Bottom Section */}
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-sand-500">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-sand-400">
             <p>
               © {currentYear} Webopoli. {t.footer.rights}
             </p>

@@ -80,7 +80,7 @@ export default function Contact() {
                     <Mail className="w-5 h-5 text-sage-600" aria-hidden="true" />
                   </div>
                   <div>
-                    <span className="text-sm text-clay-500 block">{t.contact.info.email}</span>
+                    <span className="text-sm text-clay-600 block">{t.contact.info.email}</span>
                     <a href="mailto:thomas@webopoli.com" className="text-clay-800 hover:text-sage-600 transition-colors">
                       thomas@webopoli.com
                     </a>
@@ -91,7 +91,7 @@ export default function Contact() {
                     <MapPin className="w-5 h-5 text-sage-600" aria-hidden="true" />
                   </div>
                   <div>
-                    <span className="text-sm text-clay-500 block">{t.contact.info.location}</span>
+                    <span className="text-sm text-clay-600 block">{t.contact.info.location}</span>
                     <span className="text-clay-800">{t.contact.info.locationValue}</span>
                   </div>
                 </div>

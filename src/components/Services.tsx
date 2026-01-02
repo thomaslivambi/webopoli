@@ -96,7 +96,7 @@ export default function Services() {
                   <h3 className={`font-serif text-2xl mb-2 ${service.highlight ? 'text-white' : 'text-clay-800'}`}>
                     {service.name}
                   </h3>
-                  <p className={`text-sm ${service.highlight ? 'text-sage-100' : 'text-clay-500'}`}>
+                  <p className={`text-sm ${service.highlight ? 'text-sage-100' : 'text-clay-600'}`}>
                     {service.description}
                   </p>
                 </div>
@@ -105,7 +105,7 @@ export default function Services() {
                   <strong className={`font-serif text-5xl ${service.highlight ? 'text-white' : 'text-clay-900'}`}>
                     {service.price}€
                   </strong>
-                  <span className={`text-sm ml-1 ${service.highlight ? 'text-sage-200' : 'text-clay-500'}`}>
+                  <span className={`text-sm ml-1 ${service.highlight ? 'text-sage-200' : 'text-clay-600'}`}>
                     {t.services.perProject}
                   </span>
                 </p>
@@ -119,7 +119,7 @@ export default function Services() {
                   ))}
                 </ul>
 
-                <p className={`text-xs mb-6 ${service.highlight ? 'text-sage-200' : 'text-clay-500'}`}>
+                <p className={`text-xs mb-6 ${service.highlight ? 'text-sage-200' : 'text-clay-600'}`}>
                   {t.services.delay} : {service.delay}
                 </p>
 
@@ -155,7 +155,7 @@ export default function Services() {
                     key={addon.name}
                     className="bg-white/50 border border-sand-200 rounded-xl p-4 text-left"
                   >
-                    <span className="text-sm text-clay-700 block">{addon.name}</span>
+                    <span className="text-sm text-clay-800 block">{addon.name}</span>
                     <strong className="font-serif text-lg text-sage-600">+{addon.price}€</strong>
                   </li>
                 ))}

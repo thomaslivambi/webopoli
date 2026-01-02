@@ -58,7 +58,7 @@ export default function Hero() {
           </div>
 
           {/* Trust Icons */}
-          <div className="flex items-center justify-center gap-8 md:gap-12 text-clay-500 animate-fade-in animation-delay-600">
+          <div className="flex items-center justify-center gap-8 md:gap-12 text-clay-600 animate-fade-in animation-delay-600">
             <div className="flex items-center gap-2 text-sm">
               <Palette className="w-5 h-5 text-terracotta-500" aria-hidden="true" />
               <span>{t.hero.trust.art}</span>
@@ -77,10 +77,10 @@ export default function Hero() {
         {/* Scroll Indicator */}
         <a
           href="#philosophie"
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-clay-400 hover:text-sage-600 transition-colors animate-bounce-slow"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-clay-500 hover:text-sage-600 transition-colors animate-bounce-slow"
           aria-label={t.hero.scroll}
         >
-          <span className="text-xs tracking-widest uppercase">{t.hero.scroll}</span>
+          <span className="text-xs tracking-widest uppercase text-clay-500">{t.hero.scroll}</span>
           <ArrowDown className="w-5 h-5" aria-hidden="true" />
         </a>
       </div>
