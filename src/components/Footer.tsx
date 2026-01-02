@@ -38,10 +38,6 @@ export default function Footer() {
               <p className="text-sand-300 leading-relaxed max-w-md mb-6">
                 {t.footer.tagline}
               </p>
-              <p className="flex items-center gap-2 text-sage-400 text-sm">
-                <Leaf className="w-4 h-4" aria-hidden="true" />
-                <span>{t.hero.badge}</span>
-              </p>
               
               {/* Badge EcoIndex statique (évite requête externe) */}
               <a 
