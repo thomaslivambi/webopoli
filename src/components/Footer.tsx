@@ -45,7 +45,7 @@ export default function Footer() {
               
               {/* Badge EcoIndex statique (évite requête externe) */}
               <a 
-                href="https://www.ecoindex.fr/resultat/?url=https://webopoli.com" 
+                href="https://www.ecoindex.fr/resultat/?id=928cd522-b4e0-47d4-b168-fd0a79473d08" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 mt-4 px-3 py-2 bg-sage-900/50 border border-sage-700 rounded-lg text-sage-300 hover:bg-sage-800/50 transition-colors"
