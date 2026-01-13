@@ -5,6 +5,7 @@
     "ecosystem": "Outils digitaux",
     "portfolio": "Réalisations",
     "process": "Processus",
+    "faq": "FAQ",
     "contact": "Contact"
   },
   "hero": {
@@ -182,7 +183,7 @@
         "description": "Chaque outil s'adapte à votre façon de travailler, pas l'inverse."
       }
     ],
-    "ctaTitle": "Chaque projet est unique",
+    "ctaTitle": "À chaque projet, des besoins spécifiques",
     "ctaDescription": "Plutôt qu'une grille tarifaire rigide, je vous propose un audit offert de 30 minutes pour comprendre vos besoins et vous proposer un devis sur mesure, adapté à votre situation.",
     "finalCta": "Réserver mon audit offert",
     "finalCtaNote": "30 min pour comprendre vos besoins — sans engagement"
@@ -267,6 +268,59 @@
       "location": "Localisation",
       "locationValue": "Autun, Bourgogne-Franche-Comté"
     }
+  },
+  "faq": {
+    "label": "Questions fréquentes",
+    "title": "Tout ce que vous",
+    "titleHighlight": "voulez savoir",
+    "description": "Des réponses claires et transparentes sur notre façon de travailler, nos tarifs et notre philosophie.",
+    "cta": {
+      "title": "Vous avez d'autres questions ?",
+      "description": "Chaque projet est unique. Discutons du vôtre autour d'un échange gratuit de 30 minutes.",
+      "button": "Prendre rendez-vous"
+    },
+    "items": [
+      {
+        "question": "Pourquoi faire appel à un développeur web plutôt qu'utiliser Wix ou Canva ?",
+        "answer": "Les plateformes comme Wix ou Canva sont pratiques pour démarrer, mais elles ont des limites importantes :\n\n**Performance** : Un site sur-mesure charge en moins d'1 seconde, contre 3-5 secondes sur ces plateformes. Google pénalise les sites lents dans son référencement.\n\n**Propriété** : Avec Wix, vous louez votre présence web. Si vous arrêtez de payer ou si la plateforme ferme, tout disparaît. Avec un site développé, vous êtes propriétaire de votre code.\n\n**Personnalisation** : Les templates sont reconnaissables. Votre site ressemble à des milliers d'autres. Un site sur-mesure reflète vraiment votre identité unique.\n\n**SEO** : Le code généré par ces plateformes est souvent mal optimisé pour le référencement naturel.\n\n**Coût à long terme** : Wix Pro coûte ~180€/an avec des fonctionnalités limitées. Nos forfaits maintenance (300€/an) incluent plus de services et un site vraiment performant."
+      },
+      {
+        "question": "Que signifie « site éco-conçu » ?",
+        "answer": "Un site éco-conçu minimise son impact environnemental à plusieurs niveaux :\n\n**Hébergement vert** : Nos sites sont hébergés sur des serveurs Hetzner en Allemagne, alimentés à 100% par énergie renouvelable.\n\n**Code optimisé** : Un code léger = moins de données transférées = moins d'énergie consommée. Chaque visite sur un site optimisé émet ~0.2g de CO2, contre 1-2g pour un site classique.\n\n**Images intelligentes** : Compression automatique, formats modernes (WebP), chargement différé. Vos images restent belles mais pèsent 5x moins.\n\n**Pas de superflu** : On évite les trackers inutiles, les animations gourmandes, les fonctionnalités non utilisées.\n\n**Durabilité** : Un site bien construit dure des années sans devenir obsolète.\n\nLe web représente 4% des émissions mondiales de CO2. Chaque site éco-conçu est un petit geste qui compte."
+      },
+      {
+        "question": "Quelle autonomie aurai-je sur mon site après sa création ?",
+        "answer": "Vous gardez un contrôle total sur l'essentiel :\n\n**Ce que vous pouvez modifier librement :**\n• Textes et contenus de toutes les pages\n• Images et photos (via un espace simple)\n• Articles de blog ou actualités\n• Produits de votre boutique (si applicable)\n• Informations de contact, horaires, etc.\n\n**Ce qui nécessite une intervention technique :**\n• Ajout de nouvelles pages ou sections\n• Modifications de la structure ou du design\n• Nouvelles fonctionnalités\n\n**Formation incluse** : Chaque livraison comprend une formation pour maîtriser votre espace d'administration.\n\n**Support réactif** : Besoin d'une modification ? Nos forfaits maintenance incluent des heures de modifications (1h à 6h/an selon la formule).\n\nL'objectif : vous êtes autonome sur le quotidien, accompagné sur le reste."
+      },
+      {
+        "question": "Pourquoi vos tarifs sont-ils plus accessibles que le marché ?",
+        "answer": "Nos prix (300€ à 750€) sont 3 à 5 fois moins chers qu'une agence classique. Voici comment c'est possible :\n\n**L'IA comme partenaire** : J'utilise Claude (IA d'Anthropic) comme assistant de développement. Cela divise mon temps de travail par 2, sans compromettre la qualité – au contraire.\n\n**Infrastructure optimisée** : Un seul serveur héberge tous les sites clients (~12€/mois pour moi, pas de coût par site).\n\n**Pas de dépenses superflues** : Pas de locaux, pas d'équipe commerciale, pas de publicité payante. Juste du bouche-à-oreille et un travail de qualité.\n\n**Une philosophie** : Je crois que le digital ne devrait pas coûter des mois de collecte de fonds. Les acteurs du changement positif – artistes, thérapeutes, associations – méritent une présence web à la hauteur de leur mission.\n\n**Mes compétences** : 5+ ans d'expérience en développement web, spécialisé dans les technologies modernes (Next.js, TypeScript). La rapidité vient aussi de la maîtrise.\n\nCe n'est pas du low-cost, c'est du juste prix."
+      },
+      {
+        "question": "Quels sont les délais de création ?",
+        "answer": "Nous livrons vite sans bâcler :\n\n**Site Présence Essentielle** (5 pages) : 5-7 jours\n**Pack Engagement** (+ agenda, newsletter) : 7-10 jours\n**Pack Créateur** (+ blog, e-shop) : 10-14 jours\n\n**Comment c'est possible ?**\n• Brief clair dès le départ (formulaire structuré)\n• Outils modernes et IA = développement accéléré\n• Process rodé et templates réutilisables\n• Communication fluide avec vous\n\n**Ce qui peut rallonger :**\n• Attente de contenu (textes, photos)\n• Nombreux allers-retours de validation\n• Ajout de fonctionnalités en cours de route\n\n💡 *Astuce* : Préparez vos textes et visuels avant le démarrage pour un lancement éclair !"
+      },
+      {
+        "question": "Mon site sera-t-il bien référencé sur Google ?",
+        "answer": "Chaque site est optimisé pour le SEO dès sa création :\n\n**Technique irréprochable :**\n• Code sémantique et accessible\n• Temps de chargement ultra-rapide (<1s)\n• Site responsive (mobile-first)\n• Certificat SSL (https://)\n• Sitemap et robots.txt générés automatiquement\n\n**Fondations SEO :**\n• Balises title et meta descriptions optimisées\n• Structure de titres cohérente (H1, H2, H3...)\n• Textes alternatifs sur les images\n• URLs propres et lisibles\n\n**Ce qui fait la différence ensuite :**\n• La qualité de vos contenus\n• La régularité de vos publications\n• Les liens entrants vers votre site\n\nLe SEO est un marathon, pas un sprint. On vous livre un site techniquement parfait – à vous de l'alimenter avec du contenu de qualité !"
+      },
+      {
+        "question": "Proposez-vous la maintenance et l'hébergement ?",
+        "answer": "Oui, avec trois formules adaptées à vos besoins :\n\n**Maintenance Essentielle** – 25€/mois\n• Hébergement sécurisé\n• Sauvegardes quotidiennes\n• Mises à jour sécurité\n• Support email (72h)\n• 1h de modifications/an\n\n**Maintenance Sérénité** – 45€/mois\n• Tout le précédent +\n• Support prioritaire (48h)\n• Analytics mensuels\n• 3h de modifications/an\n• Rapport mensuel\n\n**Maintenance Premium** – 75€/mois\n• Tout le précédent +\n• Support rapide (24h)\n• 6h de modifications/an\n• Accompagnement stratégie digitale\n• Consulting mensuel 30min\n\n*La première année d'hébergement est incluse dans la création.*"
+      },
+      {
+        "question": "Quelles technologies utilisez-vous ?",
+        "answer": "Notre stack est moderne, performante et open source :\n\n**Frontend :**\n• Next.js 14+ (framework React leader)\n• TypeScript (code robuste)\n• Tailwind CSS (design sur-mesure)\n\n**Hébergement :**\n• Coolify (alternative open source à Vercel)\n• Hetzner (serveurs allemands, énergie verte)\n• Let's Encrypt (SSL gratuit et automatique)\n\n**Pourquoi ces choix ?**\n• **Performance** : Next.js génère des sites ultra-rapides\n• **Pérennité** : Technologies maintenues par de grandes communautés\n• **Souveraineté** : Pas de dépendance aux géants du web (GAFAM)\n• **Open source** : Liberté, transparence, pas de vendor lock-in\n\nVous n'êtes jamais prisonnier d'une plateforme propriétaire."
+      },
+      {
+        "question": "Comment se déroule un projet avec vous ?",
+        "answer": "Un processus simple et transparent :\n\n**1. Premier échange** (gratuit, 30 min)\nDécouverte de votre projet, vos besoins, votre univers.\n\n**2. Proposition** (sous 48h)\nDevis détaillé, direction artistique suggérée, planning.\n\n**3. Validation & acompte**\n50% à la signature pour démarrer.\n\n**4. Création** (5-14 jours selon formule)\nPoints d'étape réguliers, vous validez les étapes clés.\n\n**5. Livraison & formation**\nMise en ligne, formation utilisation, documentation.\nSolde de 50% à la livraison.\n\n**6. Suivi** (optionnel)\nMaintenance et accompagnement dans la durée.\n\nPas de surprise, pas de jargon. On avance ensemble."
+      },
+      {
+        "question": "Travaillez-vous uniquement avec des acteurs engagés ?",
+        "answer": "C'est notre cœur de cible, mais pas une exclusivité.\n\n**Notre clientèle privilégiée :**\n• Artistes, musiciens, créateurs\n• Thérapeutes, coachs bien-être\n• Producteurs bio, acteurs de l'écologie\n• Associations, collectifs citoyens\n• Entrepreneurs à impact positif\n\n**Pourquoi cette spécialisation ?**\nNous comprenons vos valeurs, votre vocabulaire, vos contraintes budgétaires. Le dialogue est plus fluide, le résultat plus juste.\n\n**Mais aussi :**\nSi votre projet est aligné avec des valeurs de respect (de l'humain, de l'environnement, du vivant), parlons-en ! Nous restons ouverts aux belles rencontres.\n\nCe qu'on évite : les projets qui contredisent nos valeurs (greenwashing, industrie polluante, etc.)."
+      }
+    ]
   },
   "footer": {
     "tagline": "Création de sites web éco-conçus et outils digitaux pour acteurs du changement positif.",

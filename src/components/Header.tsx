@@ -16,6 +16,7 @@ export default function Header() {
     { href: '#ecosystem', label: t.nav.ecosystem },
     { href: '#processus', label: t.nav.process },
     { href: '#realisations', label: t.nav.portfolio },
+    { href: '/faq', label: t.nav.faq },
     { href: '#contact', label: t.nav.contact },
   ]
 
@@ -30,6 +31,9 @@ export default function Header() {
   const toggleLanguage = () => {
     setLocale(locale === 'fr' ? 'en' : 'fr')
   }
+
+  // Helper pour déterminer si c'est un lien interne (page) ou une ancre
+  const isPageLink = (href: string) => href.startsWith('/')
 
   return (
     <header
@@ -50,13 +54,23 @@ export default function Header() {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8" aria-label="Navigation principale">
           {navItems.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className="text-clay-600 hover:text-sage-600 transition-colors text-sm tracking-wide"
-            >
-              {item.label}
-            </a>
+            isPageLink(item.href) ? (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-clay-600 hover:text-sage-600 transition-colors text-sm tracking-wide"
+              >
+                {item.label}
+              </Link>
+            ) : (
+              <a
+                key={item.href}
+                href={item.href}
+                className="text-clay-600 hover:text-sage-600 transition-colors text-sm tracking-wide"
+              >
+                {item.label}
+              </a>
+            )
           ))}
           
           {/* Language Switcher */}
@@ -107,14 +121,25 @@ export default function Header() {
           <div className="fixed inset-0 bg-sand-50 md:hidden">
             <nav className="flex flex-col items-center justify-center h-full gap-8" aria-label="Navigation mobile">
               {navItems.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="font-serif text-3xl text-clay-800 hover:text-sage-600 transition-colors"
-                >
-                  {item.label}
-                </a>
+                isPageLink(item.href) ? (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="font-serif text-3xl text-clay-800 hover:text-sage-600 transition-colors"
+                  >
+                    {item.label}
+                  </Link>
+                ) : (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="font-serif text-3xl text-clay-800 hover:text-sage-600 transition-colors"
+                  >
+                    {item.label}
+                  </a>
+                )
               ))}
               <a
                 href="#contact"

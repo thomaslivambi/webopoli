@@ -40,8 +40,11 @@ export default function EcoPerformance() {
               {/* Badge EcoIndex */}
               <div className="flex items-center justify-center py-6 mb-6 bg-sage-50 rounded-2xl">
                 <div className="text-center">
-                  <div className="inline-flex items-center justify-center w-20 h-20 bg-sage-600 rounded-full mb-3">
+                  <div className="inline-flex items-center justify-center w-20 h-20 bg-sage-600 rounded-full mb-3 mr-1 ml-1">
                     <span className="text-3xl font-bold text-white">A</span>
+                  </div>
+                  <div className="inline-flex items-center justify-center w-20 h-20 bg-sage-600 rounded-full mb-3 mr-1 ml-1">
+                    <span className="text-3xl font-bold text-white">B</span>
                   </div>
                   <p className="text-sage-700 font-medium">EcoIndex</p>
                   <p className="text-xs text-sage-600">{t.ecoPerformance.ecoIndex.label}</p>
